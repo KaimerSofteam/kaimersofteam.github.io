@@ -1,0 +1,776 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Bootstrap Core CSS -->
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="~/Content/css/agency.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="~/Content/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/component.css" />
+<link href="~/Content/css/Design.css" rel="stylesheet" />
+<link href="~/Content/css/coworkers.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+<script src="//fast.eager.io/95HYuj6zfx.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<body id="page-top" class="index" onload="Load()">
+    <div id="ajaxSpinnerContainer">
+        <img src="@Url.Content("~/Content/img/intersectionSpinner.gif")" id="ajaxSpinnerImage" title="working...">
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="~/Content/img/KS-Kaimer Softeam Blue.png" class="kslogo"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+    <header>
+        <div id="large-header" class="container large-header">
+            
+                <div id="slider">
+                    <div id="imgs">
+                        <!-- here you have to add the img tag -->
+                        <img id="Img4" src="~/Content/img/mobile.png" />
+                        <img id="Img2" src="~/Content/img/webApp.jpg" />
+                        <img id="Img3" src="~/Content/img/webService.jpg" />
+                        <img id="Img1" src="~/Content/img/webSite.jpg" />
+                        <canvas id="demo-canvas" class="canvas"></canvas>
+                        @*<div class="intro-text main-title">
+                            <div class="intro-heading" style="color:rgba(100, 0, 0, 0.98);">Kaimer Softeam S.A</div>
+                        </div>*@
+                    </div>
+                    <!--Here is going to be the left right buttons, the info and the imgs shown-->
+                    <div id="Snav">
+                        <!-- the left and right button -->
+                        <div id="SnavMiddle">
+                            <img id="Sleft" src="~/Content/img/left.png" onclick="prev()" />
+                            <img id="Sright" src="~/Content/img/right.png" onclick="next()" />
+                        </div>
+                        <!-- here is the circles , showes the current img -->
+                        <div id="SnavUp">
+                            <div id="Scircles">
+                                <ul>
+                                    <!-- here you have to add the li tag-->
+                                    <li id="S0"></li>
+                                    <li id="S1"></li>
+                                    <li id="S2"></li>
+                                    <li id="S3"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- the info -->
+                        <div id="SnavBottom">
+                            <!-- here you have to add the p tag-->
+                            <p id="SP0">Web Sites</p> <a href="#services" class="page-scroll btn btn-xl pull-right tellMeMore">Tell Me More</a>
+                            <p id="SP1">Web Applications</p>
+                            <p id="SP2">Web Services</p>
+                            <p id="SP3">Mobile development</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </header>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="margin-top:-5%;">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">Jump into the future.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3" style="margin-top:-5%;">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web Sites</h4>
+                    <p class="text-muted">Do you want to have your own website to promote themselves in such an important and crowded  medium as Internet is?<br />we can help you create the site that will suit you in every single aspect, through some of the following technologies Responsive Design, CSS3, HTML5, Javascript.</p>
+                    @*<a class="page-scroll btn btn-primary" style="margin-top:18.3%;" href="#contact"><span class="fa fa-phone"></span> Contact US</a>*@
+                </div>
+                <div class="col-md-3" style="margin-top:-5%;">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web Applications</h4>
+                    <p class="text-muted">Are you interested in improving the logistics and procedures you use in your business, to become more productive, safe, reliable and accurate? <br /> Our better engineers will be glad to help you develop your project with their skills in some technologies like Laravel, Postgresql, ASP.NET, SQL, Responsive Design, Web Security, CSS3, HTML5, Javascript.<br /> ¡beat that excels!</p>
+                    @*<a class="page-scroll btn btn-primary" href="#contact"><span class="fa fa-phone"></span> Contact US</a>*@
+                </div>
+                <div class="col-md-3" style="margin-top:-5%;">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-server fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web Services</h4>
+                    <p class="text-muted">Do you have the need to exchange data between different software applications developed in different programming languages to execute them on any platform?<br /> We can do it thereby achieving interoperability. Our engineers will be happy to help you and create a web service for you, using server side languages like C# and PHP.</p>
+                    @*<a class="page-scroll btn btn-primary" style="margin-top:9%;" href="#contact"><span class="fa fa-phone"></span> Contact US</a>*@
+                </div>
+                <div class="col-md-3" style="margin-top:-5%;">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Mobile development</h4>
+                    <p class="text-muted">Want to develop an application to access it quickly from your smartphone?<br /> We can do it through iOS (Xcode), Hybrid (Xamarin) or Android (Android Studio).</p>
+                    @*<a class="page-scroll btn btn-primary" style="margin-top:45.5%;" href="#contact"><span class="fa fa-phone"></span> Contact US</a>*@
+                </div>
+            </div>
+            <div class="row text-center">
+                <a class="page-scroll btn btn-primary" href="#contact"><span class="fa fa-phone"></span> Contact US</a>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray bodyImg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Take a look at some of our recent work</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-6 portfolio-item" style="margin-top:-4%;">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="~/Content/img/portfolio/KSAssistant.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption" style="background-color:#1F3A4D; border-radius:3px 3px">
+                        <h4 style="color:white">KSAssistant</h4>
+                        <p class="text-muted" style="color:white">Export Logistic System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">We are glad to tell you a small part of our story</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="~/Content/img/about/ks_logo.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2016-2017</h4>
+                                    <h4 class="subheading">Kaimer Softeam</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">We are a group of four entrepreneurs who always wanted to take our passion for technology and the advantages they offer to achieve and undertake a new initiative and thus benefit many people. That's how we come into Kaimer Softeam.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="~/Content/img/about/ksassistant.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">KSAssistant</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">As a change initiative in the field of exporting logistics used in Costa Rica where almost the majority of the exporter companies handle their processes manually. Kaimer Softeam saw the need for improving the processes through a system called KSAssistant that automates the exporting logistics processes.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="~/Content/img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">First placement</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">After days of dedication, We got the results  of our efforts when the KSassistant system was released to our first client, Productos Horticolas Norteños S.A. getting amazing results for all and thus forming a friendly connection to continue growing together.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Be Part
+                                    <br>Of Our
+                                    <br>Story!
+                                </h4>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Be part of our story</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">We are still working on KSAssistant and other new projects but we are capable to handle your business and we will be happy to help you work out your idea and put it out of the box</p>
+                                </div>
+                            </div>
+                        </li>
+                        @*<li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Be Part
+                                    <br>Of Our
+                                    <br>Story!
+                                </h4>
+                            </div>
+                        </li>*@
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray bodyImg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Coworkers</h2><br>
+                    @*<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member ul">
+                        <div class="li">
+                            <div class="image-wrap">
+                                <img src="~/Content/img/team/1.jpg" style="border: 7px solid #1F3A4D;" class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="school">National Technical University (UTN)</span>
+                                <span class="state">San Carlos, Alajuela</span>
+                            </div>
+                            <a href="#" class="a"></a>
+                        </div>
+                        <h4>Elvis Rocha</h4><br>
+                        @*<p class="text-muted">Marketing</p>*@
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=1294924474&fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/elvis-rocha-978a48a1?trk=nav_responsive_tab_profile" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member ul">
+                        <div class="li">
+                            <div class="image-wrap">
+                                <img src="~/Content/img/team/2.jpg" style="border: 7px solid #1F3A4D;" class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="school">Technology Institute of Costa Rica (TEC)</span>
+                                <span class="state">San Carlos, Alajuela</span>
+                            </div>
+                            <a href="#" class="a"></a>
+                        </div>
+                        <h4>Jhonny Corella</h4><br>
+                        @*<p class="text-muted">Marketing</p>*@
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/jhonnycorella?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jhonnycorella?authType=NAME_SEARCH&authToken=oPBx&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A109737508%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1466389936494%2Ctas%3Ajh" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member ul">
+                        <div class="li">
+                            <div class="image-wrap">
+                                <img src="~/Content/img/team/3.jpg" style="border: 7px solid #1F3A4D;" class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="school">Technology Institute of Costa Rica (TEC)</span>
+                                <span class="state">San Carlos, Alajuela</span>
+                            </div>
+                            <a href="#" class="a"></a>
+                        </div>
+                        <h4>Brian Corella</h4><br>
+                        @*<p class="text-muted">Marketing</p>*@
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/BrianCorellaP?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/briancorella?authType=NAME_SEARCH&authToken=5Jua&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A109730533%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1466389989369%2Ctas%3Abria" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member ul">
+                        <div class="li">
+                            <div class="image-wrap">
+                                <img src="~/Content/img/team/4.jpg" style="border: 7px solid #1F3A4D" class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="school">National Technical University (UTN)</span>
+                                <span class="state">San Carlos, Alajuela</span>
+                            </div>
+                            <a href="#" class="a"></a>
+                        </div>
+                        <h4>Jean Carlo Rojas</h4><br>
+                        @*<p class="text-muted">Marketing</p>*@
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/jeancarlo.rojasmarin?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jean-carlos-rojas-mar%C3%ADn-01198710a?authType=NAME_SEARCH&authToken=9Ywx&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CentityType%3AentityHistoryName%2CclickedEntityId%3Amynetwork_462259021%2Cidx%3A0" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row"><br />
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">We will be glad to help you turn your ideas into reality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Aside -->
+    @*<aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="~/Content/img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="~/Content/img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="~/Content/img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="~/Content/img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>*@
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted" style="color:white; margin-top:-1%;">Send us a message and we will reply you ASAP. <br />If you prefer give us a call, here you go our phone numbers<br /> <span class="fa fa-phone"> </span>(+506) 7016-3299 &nbsp; <span class="fa fa-phone"> </span>(+506) 8631-6351</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone" name="phone" id="phone" @*required data-validation-required-message="Please enter your number."*@>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" name="message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">&copy; Kaimer Softeam S.A. All rights reserved. 2016</span>
+                </div>
+                <div class="col-md-4">
+                    @*<ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>*@
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                    @*<ul class="list-inline quicklinks">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>KSAssistant</h2>
+                            <p class="item-intro text-muted">Export Logistic System</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/KSAssistant.png" width="200" height="150">
+                            <p>This is a system inspired by the workflow that handles companies that export products, the system was designed to automates processes like booking request, shipping instructions, ISF, suppliers notifications and Verify Gross Mass</p>
+                            <ul class="list-inline">
+                                <li>Date: July 2016</li>
+                                <li>Client: KSAssistant</li>
+                                <li>Category: Export Logistic System</li>
+                            </ul>
+                            <a href="@Url.Action("KSAssistant", "Slides")" type="button" class="btn btn-primary"><i class="fa fa-bars"></i> Go to Slide</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Heading</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/startup-framework-preview.png" alt="">
+                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/golden-preview.png" alt="">
+                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/escape-preview.png" alt="">
+                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/Content/img/portfolio/dreams-preview.png" alt="">
+                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery -->
+<script src="~/Scripts/Utilities/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="~/Scripts/Utilities/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="~/Scripts/Utilities/classie.js"></script>
+<script src="~/Scripts/Utilities/cbpAnimatedHeader.js"></script>
+<!-- Contact Form JavaScript -->
+<script src="~/Scripts/Utilities/jqBootstrapValidation.js"></script>
+<script src="~/Scripts/Utilities/contact_me.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="~/Scripts/Utilities/agency.js"></script>
+
+<script src="~/Scripts/Utilities/TweenLite.min.js"></script>
+<script src="~/Scripts/Utilities/EasePack.min.js"></script>
+<script src="~/Scripts/Utilities/rAF.js"></script>
+<script src="~/Scripts/Utilities/demo-1.js"></script>
+
+<script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-82689332-1', 'auto');
+        ga('send', 'pageview');
+
+        //ok , it's working , we are done , if you want to add imgs you have to :
+
+        //1 - add an img tag with id : Img++; ex:  <img id="Img4" src="IMG/1.jpg"/>
+        //2 - add an li tag  with id : S++;   ex:  <li id="S4"></li>
+        //3 - add an p tag with id : SP++;    ex:  <p id="SP4"></p>
+        //4 - change the value of nrImg
+
+        var nrImg = 4;  //the number of img , I only have 3
+        var IntSeconds = 6;     //the seconds between the imgs
+
+        function Load()
+        {
+            nrShown = 0;    //the img visible
+            Vect = new Array(nrImg + 10);
+            Vect[0] = document.getElementById("Img1");
+            Vect[0].style.visibility = "visible";
+
+            document.getElementById("S" + 0).style.visibility = "visible";
+
+            for (var i = 1; i < nrImg; i++)
+            {
+                Vect[i] = document.getElementById("Img" + (i + 1));
+                document.getElementById("S" + i).style.visibility = "visible";
+            }
+
+            document.getElementById("S" + 0).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function Timer()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+        }
+        //next img
+        function next()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function prev()
+        {
+            nrShown--;
+            if (nrShown == -1)
+                nrShown = nrImg -1;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        //here changes the img + effect
+        function Effect()
+        {
+            for (var i = 0; i < nrImg; i++)
+            {
+                Vect[i].style.opacity = "0";   //to add the fade effect
+                Vect[i].style.visibility = "hidden";
+
+                document.getElementById("S" + i).style.backgroundColor = "rgba(0, 0, 0, 0.70)";
+                document.getElementById("SP" + i).style.visibility = "hidden";
+            }
+            Vect[nrShown].style.opacity = "1";
+            Vect[nrShown].style.visibility = "visible";
+            document.getElementById("S" + nrShown).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+        }
+
+        //function success() {
+        //    jQuery("#ajaxSpinnerImage").show();
+        //    jQuery("#ajaxSpinnerContainer").show();
+        //    document.forms["contactForm"].submit();
+        //}
+
+</script>
+
